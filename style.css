@@ -1,0 +1,171 @@
+/* Reinicia márgenes y rellenos en todos los elementos */
+* {
+    margin: 0;             /* Elimina margen por defecto */
+    padding: 0;            /* Elimina relleno por defecto */
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total del elemento */
+}
+
+/* Estilos globales para el body */
+body {
+    font-family: Arial, sans-serif; /* Establece la tipografía */
+    background: #f4f7f6; /* Gris claro como fondo de la página */
+    color: #2d3436; /* Gris oscuro para el texto */
+}
+
+/* Estilos para el header (cabecera fija) */
+header {
+  position: fixed;      /* Fija el header en la parte superior de la página */
+  top: 0;               /* Lo coloca en la parte superior */
+  left: 0;              /* Lo ajusta al borde izquierdo */
+  width: 100%;          /* Hace que ocupe todo el ancho */
+  background: #1b262c;  /* Fondo oscuro para el header */
+  padding: 15px 30px;    /* Espaciado dentro del header */
+  display: flex;        /* Usa flexbox para alinear los elementos */
+  justify-content: space-between; /* Espaciado entre los elementos del header */
+  align-items: center;  /* Alinea los elementos al centro */
+  border-bottom: 3px solid #27ae60; /* Línea verde debajo del header */
+  z-index: 1000;        /* Asegura que el header quede por encima del contenido */
+}
+
+/* Estilo para ajustar el contenido debajo del header fijo */
+main {
+  margin-top: 90px; /* Da espacio suficiente para que el contenido no quede oculto bajo el header */
+}
+
+/* Estilos para la parte del logo en el header */
+header .logo {
+    display: flex;          /* Usa flexbox para alinear logo y texto */
+    align-items: center;    /* Alinea verticalmente los elementos */
+    gap: 10px;              /* Espaciado entre el logo y el texto */
+}
+
+header .logo img {
+    width: 70px;            /* Ajusta el tamaño del logo */
+    height: auto;           /* Mantiene la proporción del logo */
+}
+
+/* Estilos para el título principal en el header */
+header .titulo h1 {
+    font-size: 1.8em;       /* Tamaño de fuente grande */
+    margin: 5px;            /* Márgenes pequeños */
+    color: #27ae60;         /* Color verde para el texto */
+}
+
+/* Estilos para el subtítulo en el header */
+header .titulo h2 {
+    font-size: 0.9em;       /* Tamaño de fuente pequeño */
+    font-weight: normal;    /* Peso de fuente normal */
+    margin-top: 4px;        /* Un pequeño espacio superior */
+    color: #bdc3c7;         /* Color gris claro para el subtítulo */
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none;       /* Elimina los puntos de lista */
+    display: flex;          /* Usa flexbox para alinear los enlaces en línea */
+    gap: 25px;              /* Espaciado entre los enlaces */
+}
+
+/* Estilo para los enlaces de navegación */
+nav a {
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    font-weight: 500;       /* Peso de la fuente medio */
+    color: #ecf0f1;         /* Color blanco suave para los enlaces */
+    transition: all 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+nav a:hover {
+    color: #27ae60;         /* Cambia el color a verde */
+    border-bottom: 2px solid #27ae60; /* Añade una línea verde abajo */
+    padding-bottom: 3px;    /* Espaciado debajo del texto */
+}
+
+/* Estilos para la sección hero */
+.hero {
+    text-align: center;     /* Centra el texto en la sección */
+    padding: 60px 20px;     /* Espaciado dentro de la sección */
+    background: linear-gradient(to right, #27ae60, #2980b9); /* Fondo degradado de verde a azul */
+    color: #ffffff;         /* Texto en blanco */
+}
+
+/* Estilo para el título en la sección hero */
+.hero h2 {
+    font-size: 2.2em;       /* Tamaño de fuente grande */
+    margin-bottom: 10px;    /* Espacio debajo del título */
+}
+
+/* Estilo para el párrafo en la sección hero */
+.hero p {
+    font-size: 1.1em;       /* Tamaño de fuente mediano */
+}
+
+/* Estilos generales para todas las secciones */
+section {
+  scroll-margin-top: 100px; /* Añade un margen superior al hacer scroll para evitar que se tape con el header */
+}
+
+/* Estilos para las secciones de contenido */
+.contenido {
+    padding: 40px 20px;     /* Espaciado dentro de las secciones */
+    background: #ffffff;    /* Fondo blanco */
+    margin: 20px auto;      /* Márgenes para centrar la sección */
+    max-width: 900px;       /* Ancho máximo de la sección */
+    border-radius: 12px;    /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la sección */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background: #1b262c;    /* Fondo oscuro para el pie de página */
+    color: #ecf0f1;          /* Color blanco para el texto */
+    padding: 40px 20px 20px; /* Espaciado dentro del pie */
+    font-size: 0.9em;        /* Tamaño de fuente más pequeño */
+}
+
+/* Contenedor del pie de página con varias columnas */
+.footer-container {
+    display: grid;                        /* Usa grid para organizar las columnas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas flexibles */
+    gap: 30px;                            /* Espaciado entre columnas */
+    margin-bottom: 20px;                  /* Espacio inferior */
+}
+
+/* Estilo para los títulos de las columnas del pie */
+.footer-col h4 {
+    color: #27ae60;                      /* Color verde para los títulos */
+    margin-bottom: 10px;                  /* Espacio debajo del título */
+    font-size: 1.1em;                     /* Tamaño de fuente medio */
+}
+
+/* Estilos para las listas dentro del pie */
+.footer-col ul {
+    list-style: none;                    /* Elimina los puntos de lista */
+    padding: 0;                          /* Elimina el relleno */
+}
+
+/* Estilo para los elementos de las listas en el pie */
+.footer-col ul li {
+    margin: 6px 0;                       /* Espaciado entre los elementos de la lista */
+}
+
+/* Estilo para los enlaces en el pie de página */
+.footer-col a {
+    text-decoration: none;               /* Elimina subrayado */
+    color: #ecf0f1;                      /* Color blanco para los enlaces */
+    transition: color 0.3s;              /* Transición suave de color */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces en el pie */
+.footer-col a:hover {
+    color: #27ae60;                      /* Cambia a verde */
+}
+
+/* Estilos para la parte inferior del pie de página */
+.footer-bottom {
+    text-align: center;                  /* Centra el texto */
+    border-top: 1px solid #34495e;       /* Línea superior */
+    padding-top: 15px;                   /* Espacio arriba */
+    font-size: 0.8em;                    /* Tamaño de fuente más pequeño */
+    color: #bdc3c7;                      /* Gris claro para el texto */
+}
