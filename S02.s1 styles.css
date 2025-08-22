@@ -1,0 +1,99 @@
+/* Reset y estilos base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+  background: #fafafa;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: white;
+}
+.site-header .branding {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+  color:red;
+}
+
+/* Hero section */
+.hero {
+  padding: 3rem 1rem;
+  background: #ecf0f1;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Grid de servicios */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.card {
+  background: white;
+  border: 3px solid #fdd;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: auto;
+}
+.card h2 {
+  margin-top: 0;
+  color: #ff80b9;
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2c3e50;
+  color: white;
+}
+.site-footer a {
+  color: #bdc3c7;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
